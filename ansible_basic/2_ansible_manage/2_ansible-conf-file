@@ -1,0 +1,3 @@
+vi /etc/ansible/ansible.cfg
+
+vi /etc/ansible/hosts

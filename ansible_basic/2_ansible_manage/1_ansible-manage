@@ -1,0 +1,29 @@
+vi /etc/ansible/hosts
+
+[nginx]
+172.30.5.186
+172.30.5.167
+172.30.5.51
+172.30.5.90
+172.30.0.28
+172.30.5.40
+
+ansible all -m ping -k
+
+ssh-keygen -t rsa
+ls ~/.ssh/
+
+# id_rsa.pub 전송
+ssh-copy-id -i ~/.ssh/id_rsa.pub suychoi@172.30.5.186
+ssh-copy-id -i ~/.ssh/id_rsa.pub suychoi@172.30.5.167
+ssh-copy-id -i ~/.ssh/id_rsa.pub suychoi@172.30.5.51
+ssh-copy-id -i ~/.ssh/id_rsa.pub suychoi@172.30.5.90
+ssh-copy-id -i ~/.ssh/id_rsa.pub suychoi@172.30.0.28
+ssh-copy-id -i ~/.ssh/id_rsa.pub suychoi@172.30.5.40
+
+# 설정파일 변경
+sudo vi /etc/ssh/sshd_config
+    PasswordAuthentication yes
+
+sudo service ssh restart
+
