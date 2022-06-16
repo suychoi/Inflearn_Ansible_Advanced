@@ -1,0 +1,15 @@
+작업 내용을 파일로 만들어서 반복 실행하기
+ansible playbook
+1. 설치
+2. 파일 전송
+3. 서비스 재시작
+
+멱등성(idempotent), playbook 에서 지원하지만, 모듈에 따라 다른가봄.
+
+vim.yml 참조
+
+nginx.yml 배포
+ansible nginx -m shell -a "systemctl stop firewalld"
+ansible-playbook nginx.yml -K
+# 멱등성이 있어서, yaml 파일을 수정하고 나서 재 배포 해도 변경된 부분만 수정된다.
+

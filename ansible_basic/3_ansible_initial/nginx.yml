@@ -1,0 +1,13 @@
+---
+- hosts: nginx
+  remote_user: root
+  tasks:
+    - name: install epel-release
+      yum: name=epel-release state=latest
+    - name: install nginx web server
+      yum: name=nginx state=present
+      # index.html 을 다운받아서 준비해야 함
+    - name: Upload main landing page for web server
+      copy: src=index.html dest=/usr/share/nginx/html/ mode=0644
+    - name: Start nginx web server
+      service: name=nginx state=started
