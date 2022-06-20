@@ -1,4 +1,4 @@
-작업 내용을 파일로 만들어서 반복 실행하기
+[작업 내용을 파일로 만들어서 반복 실행하기]
 ansible playbook
 1. 설치
 2. 파일 전송
@@ -13,3 +13,8 @@ ansible nginx -m shell -a "systemctl stop firewalld"
 ansible-playbook nginx.yml -K
 # 멱등성이 있어서, yaml 파일을 수정하고 나서 재 배포 해도 변경된 부분만 수정된다.
 
+[앤서블 활용 팁]
+ - vim 모듈을 활용해서 yml 파일 작성 쉽게 하기
+ - 에러 내용 쉽게 읽히도록 하는 설정.
+    - vi /etc/ansible/ 에서
+    - stdout_callback = debug 로 설정
