@@ -1,0 +1,30 @@
+Provisioning : 사용자의 요구에 맞게 시스템 자원을 할당, 배치, 배포 해두었다가 필요시
+                시스템을 즉시 사용할 수 있는 상태로 미리 준비해둔 것
+
+진행 방법
+1. 노트패드 ++ 설치
+2. vagrant 설치 및 초기화
+3. vagrant 파일 수정 및 플러그인 설치
+4. CentOS 이미지 설치
+5. vagrant ssh로 접속하여 상태 확인
+
+vagrant 기초 명령어
+- vagrant init = 프로비저닝을 해주는 예제 스크립트 생성
+- vagrant up = vagrantfile 을 읽어서 프로비저닝을 진행
+- vagrant halt = vagrant에서 다루는 호스트들을 종료
+- vagrant destroy = vagrant 호스트들을 삭제
+- vagrant ssh = vagrant host에 ssh로 접속
+- vagrant provision = vagrant host의 설정 변경을을 적용
+
+
+
+
+
+
+
+
+
+
+
+
+

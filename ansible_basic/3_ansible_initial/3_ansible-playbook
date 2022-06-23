@@ -6,10 +6,11 @@ ansible playbook
 
 멱등성(idempotent), playbook 에서 지원하지만, 모듈에 따라 다른가봄.
 
-vim.yml 참조
+vim.yml 배포
 
 nginx.yml 배포
 ansible nginx -m shell -a "systemctl stop firewalld"
 ansible-playbook nginx.yml -K
 # 멱등성이 있어서, yaml 파일을 수정하고 나서 재 배포 해도 변경된 부분만 수정된다.
 
+Vim - plug 설치

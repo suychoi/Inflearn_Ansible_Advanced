@@ -1,0 +1,10 @@
+ansible 과 terraform 은 다르다.
+
+terraform 은 코드형 인프라를 배포하고, ansible은 배포된 상테에서 구성, 관리하는 목적이다.
+두 개의 공통점도 있지만, 더 정확한 비교를 위해서는
+
+Terraform vs Vagrant 비교하는게 더 맞다. ( 프로비저닝 툴 )
+
+ansible 은 절차적으로 동작하고, Terraform은 선언적으로 동작하여 선언을 해놓으면 리소스들이 그에 맞춰지는 방식이다.
+
+
